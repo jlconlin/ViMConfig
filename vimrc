@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'neosimsim/vim-latex'
 Plugin 'oblitum/rainbow'
 Plugin 'JLimperg/Align'
+Plugin 'scrooloose/nerdtree'
 
 Plugin 'jlconlin/ENDF.vim'
 
@@ -65,6 +66,8 @@ set hlsearch            " Highlight search results
 set incsearch           " Show pattern while being typed
 set ignorecase          " Searching is case insensitive
 set smartcase           " Case insensitive if pattern contains uppercase characters
+set hidden              " Hide a buffer when it is abandoned
+
 " Set options when saving a session
 set sessionoptions=blank,curdir,folds,help,options,resize,tabpages,winsize
 set colorcolumn=81      " Highlight the 81st column
@@ -78,3 +81,6 @@ nnoremap \Z :set foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1)=~@/)\\|\\|(
 " If doing a diff. Upon writing changes to file, automatically update the
 " differences
 autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+
+" Map to open NERDTree
+map <C-n> :NERDTreeToggle<CR>
