@@ -13,6 +13,8 @@ Plugin 'neosimsim/vim-latex'
 Plugin 'oblitum/rainbow'
 Plugin 'JLimperg/Align'
 
+Plugin 'jlconlin/ENDF.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
